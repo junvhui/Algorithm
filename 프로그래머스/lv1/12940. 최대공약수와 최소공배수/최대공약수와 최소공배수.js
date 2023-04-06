@@ -9,7 +9,7 @@ function solution(n, m) {
         max = n;
         min = m;
     }
-    for(let i = max; i >= 1; i--){
+    for(let i = max; i > 0; i--){
         if(n % i == 0 && m % i == 0){
             answer.push(i)
             break;
