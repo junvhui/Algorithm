@@ -6,7 +6,7 @@ function solution(t, p) {
         answer.push(t.slice(i, i+k))
     }
     for(let j = 0; j <= answer.length; j++){
-        if(parseInt(answer[j]) <= parseInt(p)){
+        if(+answer[j] <= +p){
             result++;
         }
     }
