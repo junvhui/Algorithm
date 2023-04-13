@@ -1,9 +1,8 @@
 function solution(numbers) {
-    let s = numbers.sort((a,b)=>b-a);
     var answer = [];
     for(let i = 0; i < numbers.length; i++){
         for(let j = i+1; j < numbers.length; j++){
-            answer.push(s[i]+s[j])
+            answer.push(numbers[i]+numbers[j])
         }
     }
     let result = [...new Set(answer)]
