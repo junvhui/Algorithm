@@ -1,5 +1,5 @@
 function solution(phone_number) {
-    var answer = [];
+    let answer = [];
     for(let i = 0; i < phone_number.length - 4; i++){
         answer.push("*");
     }
