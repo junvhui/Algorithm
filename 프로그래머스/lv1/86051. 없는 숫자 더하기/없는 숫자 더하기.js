@@ -1,5 +1,4 @@
 function solution(numbers) {
-    var answer = [];
     var result = [];
     for(let i = 0; i < 10; i++){
         if(!numbers.includes(i)){
