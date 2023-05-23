@@ -1,5 +1,5 @@
 function solution(arr) {
-    var answer = [];
+    let answer = [];
     
     if(arr.length == 1){
         answer.push(-1)
