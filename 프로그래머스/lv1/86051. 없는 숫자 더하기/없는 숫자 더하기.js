@@ -1,9 +1,9 @@
 function solution(numbers) {
-    var result = [];
+    var answer = [];
     for(let i = 0; i < 10; i++){
         if(!numbers.includes(i)){
-            result.push(i)
+            answer.push(i)
         }
     }
-    return result.reduce((a,b)=> a+b);
+    return answer.reduce((a,b)=> a+b);
 }
