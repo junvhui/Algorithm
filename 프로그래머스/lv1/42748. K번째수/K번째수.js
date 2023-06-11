@@ -1,5 +1,5 @@
 function solution(array, commands) {
-    let result = [];
+    var result = [];
     var arr = [];
     for(let i = 0; i < commands.length; i++){
         for(let j = commands[i][0]; j <= commands[i][1]; j++){
