@@ -1,5 +1,5 @@
 function solution(num) {
-    var cnt = 0;
+    let cnt = 0;
     if(num == 1){
         return 0;
     }
