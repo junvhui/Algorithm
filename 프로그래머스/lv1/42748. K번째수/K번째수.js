@@ -1,6 +1,6 @@
 function solution(array, commands) {
-    var result = [];
-    var arr = [];
+    let result = [];
+    let arr = [];
     for(let i = 0; i < commands.length; i++){
         for(let j = commands[i][0]; j <= commands[i][1]; j++){
             arr.push(array[j-1])
