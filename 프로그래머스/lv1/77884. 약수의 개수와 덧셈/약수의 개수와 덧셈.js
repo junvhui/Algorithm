@@ -1,6 +1,6 @@
 function solution(left, right) {
     var answer = [];
-    let result = 0;
+    var result = 0;
     for(let i = left; i <= right; i++){
         let count = 0;
         for(let j = 1; j <= i; j++){
