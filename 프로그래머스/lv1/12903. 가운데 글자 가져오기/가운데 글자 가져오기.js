@@ -1,11 +1,9 @@
 function solution(s) {
-    var answer = '';
-    let l = s.length;
-    if(s.length % 2 == 0){
-        answer += s[l/2 - 1]
-        answer += s[l/2]
+    var mid_idx = Math.floor(s.length / 2)
+    if(s.length % 2 === 0){
+        return s[mid_idx-1] + s[mid_idx]
     }else{
-        answer += s[Math.floor(l/2)]
+        return s[mid_idx]
     }
-    return answer
+
 }
