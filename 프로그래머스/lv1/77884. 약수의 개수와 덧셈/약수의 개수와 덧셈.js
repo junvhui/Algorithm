@@ -1,5 +1,5 @@
 function solution(left, right) {
-    var answer = [];
+
     var result = 0;
     for(let i = left; i <= right; i++){
         let count = 0;
