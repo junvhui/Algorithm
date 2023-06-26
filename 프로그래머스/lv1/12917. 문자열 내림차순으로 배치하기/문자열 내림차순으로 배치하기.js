@@ -1,5 +1,5 @@
 function solution(s) {
 
-    let n = s.split("").sort().reverse().join("")
-    return n;
+    var result = s.split("").sort().reverse().join("")
+    return result;
 }
