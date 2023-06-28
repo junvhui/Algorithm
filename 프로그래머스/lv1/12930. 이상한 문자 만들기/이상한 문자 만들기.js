@@ -1,16 +1,15 @@
 function solution(s) {
-    let answer = '';
-    let words = s.split(' ');
-    
-    for (let i = 0; i < words.length; i++) {
-        for(let j = 0; j < words[i].length; j++) {
-            if(j % 2 === 0) {
-                answer += words[i][j].toUpperCase();
-            } else {
-                answer += words[i][j].toLowerCase();
+    var answer = '';
+    var split_s = s.split(" ")
+    for(let i = 0; i < split_s.length; i++){
+        for(let j = 0; j < split_s[i].length; j++){
+            if(j % 2 == 0){
+                answer += split_s[i][j].toUpperCase()
+            }else{
+                answer += split_s[i][j].toLowerCase()
             }
         }
-        if (i < words.length -1) {
+        if (i < split_s.length -1) {
             answer += ' ';
         }
     }
