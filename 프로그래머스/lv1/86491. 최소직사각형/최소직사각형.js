@@ -1,14 +1,11 @@
 function solution(sizes) {
-    var max = [];
-    var min = [];
+    let w = 0;
+    let h = 0;
     for(let i = 0; i < sizes.length; i++){
-        min.push(Math.min(...sizes[i]))
-    }
-    let mins_max = Math.max(...min)
-    
-    for(let i = 0; i < sizes.length; i++){
-        max.push(Math.max(...sizes[i]))
-    }
-    let maxs_max = Math.max(...max)
-    return mins_max * maxs_max;
+        let [a, b] = sizes[i].sort((a,b) => a-b);
+        if (a > h) h = a;
+        if (b > w) w = b;
+    };
+
+    return w * h;
 }
