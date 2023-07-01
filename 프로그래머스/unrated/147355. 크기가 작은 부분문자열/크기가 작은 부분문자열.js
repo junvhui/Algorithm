@@ -1,14 +1,11 @@
 function solution(t, p) {
-    var answer = [];
-    let result = 0;
-    let k = p.length;
-    for(let i = 0; i <= t.length-k; i++){
-        answer.push(t.slice(i, i+k))
-    }
-    for(let j = 0; j <= answer.length; j++){
-        if(+answer[j] <= +p){
-            result++;
+    var answer = 0;
+    var len = p.length;
+    for(let i = 0; i < t.length-len+1; i++){
+        console.log(t.slice(i, i+len))
+        if(t.slice(i,i+len) <= p){
+            answer ++;
         }
     }
-    return result;
+    return answer;
 }
