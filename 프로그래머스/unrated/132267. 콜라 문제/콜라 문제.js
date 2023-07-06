@@ -1,8 +1,9 @@
 function solution(a, b, n) {
     var answer = 0;
-    while(n >= a){
-        answer += Math.floor(n/a) * b
-        n = Math.floor(n/a)*b + n%a;
+    while(a <= n){
+        answer += parseInt(n/a)*b
+        n = parseInt(n/a)*b + parseInt(n%a)
     }
     return answer;
 }
+
