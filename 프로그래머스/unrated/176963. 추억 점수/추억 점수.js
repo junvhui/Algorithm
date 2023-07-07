@@ -1,13 +1,13 @@
 function solution(name, yearning, photo) {
     var answer = [];
     for(let i = 0; i < photo.length; i++){
-        let value = 0;
-        for(let j = 0; j < name.length; j++){
-            if(photo[i].includes(name[j])){
-                value += yearning[j];
-            }
+        let result = 0;
+        for(let j = 0; j < photo[i].length; j++){
+            if(name.includes(photo[i][j])){
+                result += yearning[name.indexOf(photo[i][j])]
+            }    
         }
-        answer.push(value);
-    }
+        answer.push(result)
+           }
     return answer;
 }
