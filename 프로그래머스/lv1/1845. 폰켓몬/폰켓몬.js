@@ -1,13 +1,16 @@
 function solution(nums) {
-    var result = [];
-    var max = nums.length / 2;
-    
+    var answer = 0;
+    var get = [];
     for(let i = 0; i < nums.length; i++){
-        if(result.length < max){
-            if(!result.includes(nums[i])){
-                result.push(nums[i])
+        if(!get.includes(nums[i])){
+            get.push(nums[i])
+            if(answer < Math.floor(nums.length/2)){
+                answer++;
+            }else{
+                break;
             }
+            
         }
     }
-    return result.length;
+    return answer;
 }
