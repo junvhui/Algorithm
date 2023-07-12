@@ -12,7 +12,7 @@ function solution(n) {
         if(arr[i]===0) continue;
         
         // 각 인덱스(i)의 배수들을 0으로 지정해줍니다.
-        for(let j=i*2; j<=n; j+=i) {
+        for(let j=i*i; j<=n; j+=i) {
             arr[j] = 0;
         }
     }
