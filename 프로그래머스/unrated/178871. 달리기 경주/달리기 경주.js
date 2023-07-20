@@ -1,6 +1,6 @@
 function solution(players, callings) {
     //obj생성
-    var runner ={};             
+    let runner = {};             
     players.map((p,index)=>{
         runner[p] = index;
     });
