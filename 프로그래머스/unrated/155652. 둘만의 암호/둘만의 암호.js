@@ -1,7 +1,7 @@
 function solution(s, skip, index) {
-    var answer = '';
-    var alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    var alphabet_filter = [...alphabet].filter(v => ![...skip].includes(v));
+    let answer = '';
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    let alphabet_filter = [...alphabet].filter(v => ![...skip].includes(v));
     var s_arr = [...s]
     for(let i = 0; i < s_arr.length; i++){
         answer += alphabet_filter[(alphabet_filter.indexOf(s_arr[i]) + index) % alphabet_filter.length];
