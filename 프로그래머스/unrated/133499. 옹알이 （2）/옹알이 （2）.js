@@ -1,6 +1,6 @@
 function solution(babbling) {
-    var possible = ['aya', 'ye', 'woo', 'ma'];
-    var count = 0;
+    let possible = ['aya', 'ye', 'woo', 'ma'];
+    let count = 0;
     for(let i = 0; i < babbling.length; i++){
         let babble = babbling[i];
         
