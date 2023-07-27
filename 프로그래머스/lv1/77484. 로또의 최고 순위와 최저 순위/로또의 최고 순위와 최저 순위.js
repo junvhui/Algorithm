@@ -1,6 +1,6 @@
 function solution(lottos, win_nums) {
-    var answer = [];
-    var rank = {0 : 6, 1 : 6, 2 : 5, 3 : 4, 4 : 3, 5 : 2, 6 : 1}   // 순위 지정
+    let answer = [];
+    let rank = {0 : 6, 1 : 6, 2 : 5, 3 : 4, 4 : 3, 5 : 2, 6 : 1}   // 순위 지정
     let count = 0;
     
     for(let i = 0; i < lottos.length; i++){
