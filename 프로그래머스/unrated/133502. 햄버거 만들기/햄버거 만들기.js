@@ -1,13 +1,13 @@
 function solution(ingredient) {
   let answer = 0;
-  const stack = [];
+  let hamberger = [];
 
   for (let i of ingredient) {
-    stack.push(i);
+    hamberger.push(i);
 
-    if (stack.slice(-4).join('') == '1231') {
-      stack.splice(-4);
-      answer++;
+    if (hamberger.slice(-4).join('') == '1231') {   // 뒤에서부터 4개 slice 한 값이 1231이면
+        hamberger.splice(-4)                        // 뒤에서부터 4개 없애버림
+        answer++;                                   // 햄버거 1개 만든거니까 +1
     }
   }
   return answer;
