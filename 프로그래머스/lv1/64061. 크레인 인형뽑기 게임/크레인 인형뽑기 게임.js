@@ -1,23 +1,22 @@
 function solution(board, moves) {
-    var answer = 0;
-    return answer;
-}function solution(board, moves) {
-  var count = 0;
-  var stack = [];
-  for (var i = 0; i < moves.length; i++) {
-    var now = moves[i] - 1;
-    for (var j = 0; j < board.length; j++) {
-      if (board[j][now] != 0) {
-        if (stack[stack.length - 1] === board[j][now]) {
-          stack.pop();
-          count += 2;
-        } else {
-          stack.push(board[j][now]);
-        }
-        board[j][now] = 0;
-        break;
+  let answer = 0;
+  const stack = [];
+
+  moves.forEach((move) => {
+    for (let i = 0; i < board.length; i++) {
+      const item = board[i][move - 1];
+      if (item === 0) continue;
+
+      if (item === stack[stack.length - 1]) {
+        stack.pop();
+        answer += 2;
+      } else {
+        stack.push(item);
       }
+      board[i][move - 1] = 0;
+      break;
     }
-  }
-  return count;
+  });
+
+  return answer;
 }
