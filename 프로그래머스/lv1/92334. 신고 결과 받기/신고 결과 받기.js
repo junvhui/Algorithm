@@ -1,43 +1,48 @@
 function solution(id_list, report, k) {
-  let answer = []
+    let answer = new Array(id_list.length);
+    answer.fill(0);
+    let setReport = [...new Set(report)];
+    let arr = [];
+    let user = [];
+    let reportingUser = [];
+    let reportedUser = [];
 
-  // 중복 제거 후, 유저 ID, 유저가 신고한 ID 분리
-  let reports = [...new Set(report)].map((el) => el.split(' '))
-
-  // 신고 당한 ID Map
-  let reportId = new Map()
-
-  // 신고 당한 ID 카운트
-  for ([, report] of reports) {
-    reportId.set(report, reportId.get(report) + 1 || 1)
-  }
-
-  // 메일 발송 ID Map
-  let mailId = new Map()
-
-  // 메일 발송 갯수 카운트
-  for ([user, report] of reports) {
-    if (reportId.get(report) >= k) {
-      mailId.set(user, mailId.get(user) + 1 || 1)
+    for (let i = 0; i < setReport.length; i++) {
+        arr.push(setReport[i].split(' '));
     }
-  }
 
-  // 메일 발송 추출 (없는 경우 0)
-  answer = id_list.map((id) => mailId.get(id) || 0)
+    for (let i = 0; i < id_list.length; i++) {
+        user.push({ name: id_list[i], reported: 0 });
+    }
 
-  return answer
+    for (let i = 0; i < user.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (user[i].name == arr[j][1]) {
+                user[i].reported++;
+            }
+        }
+    }
+
+    for (let i = 0; i < user.length; i++) {
+        if (user[i].reported >= k) {
+            reportingUser.push(user[i].name);
+        }
+    }
+
+    for (let i = 0; i < reportingUser.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (reportingUser[i] == arr[j][1]) {
+                reportedUser.push(arr[j][0]);
+            }
+        }
+    }
+
+    for (let i = 0; i < reportedUser.length; i++) {
+        for (let j = 0; j < user.length; j++) {
+            if (reportedUser[i] == user[j].name) {
+                answer[j]++;
+            }
+        }
+    }
+    return answer;
 }
-
-const id_list = ['muzi', 'frodo', 'apeach', 'neo']
-const report = [
-  'muzi frodo',
-  'apeach frodo',
-  'frodo neo',
-  'muzi neo',
-  'apeach muzi',
-]
-console.log(solution(id_list, report, 2))
-
-const id_list2 = ['con', 'ryan']
-const report2 = ['ryan con', 'ryan con', 'ryan con', 'ryan con']
-console.log(solution(id_list2, report2, 3))
