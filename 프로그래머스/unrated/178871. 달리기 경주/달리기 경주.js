@@ -1,21 +1,23 @@
 function solution(players, callings) {
     //obj생성
     let runner = {};             
-    players.map((p,index)=>{
+    players.map((p,index)=>{        // mumu : 0, soe : 1, poe : 2, kai : 3 이런식으로 map
         runner[p] = index;
     });
+
+    
     
     for(let i = 0; i < callings.length; i++) {
-        const calledName = runner[callings[i]];
-        const overtakedName = players[calledName-1];
+        const calledNameIdx = runner[callings[i]];         // 역전한 사람의 인덱스 값
+        const overtakedName = players[calledNameIdx-1];    // 역전당한 사람은 불린 사람의 인덱스 - 1인 사람
 
         //players 순서에 값 넣기 
-        players[calledName-1] = callings[i];
-        players[calledName] = overtakedName;
+        players[calledNameIdx-1] = callings[i];            
+        players[calledNameIdx] = overtakedName;            
 
         //obj 값변경
-        runner[callings[i]] = calledName-1;
-        runner[overtakedName]  = calledName;
+        runner[callings[i]] = calledNameIdx-1;
+        runner[overtakedName]  = calledNameIdx;
 
     }
     return players;
