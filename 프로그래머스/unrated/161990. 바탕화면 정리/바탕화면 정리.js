@@ -6,10 +6,10 @@ function solution(wallpaper) {
     for(let i = 0; i < wallpaper.length; i++){
         for(let j = 0; j < wallpaper[0].length; j++){
             if(wallpaper[i][j] == "#"){
-                max_i = Math.max(max_i, i);
-                max_j = Math.max(max_j, j);
-                min_i = Math.min(min_i, i);
-                min_j = Math.min(min_j, j);
+                max_i = Math.max(max_i, i);         // 최대값 비교해서 더 큰 값 담음
+                max_j = Math.max(max_j, j);         // 최대값 비교해서 더 큰 값 담음
+                min_i = Math.min(min_i, i);         // 최소값 비교해서 더 작은 값 담음
+                min_j = Math.min(min_j, j);         // 최소값 비교해서 더 작은 값 담음
             }
                 
             }
