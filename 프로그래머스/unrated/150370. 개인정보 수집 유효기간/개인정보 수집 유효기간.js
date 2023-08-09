@@ -1,6 +1,6 @@
 // 만료 날짜 구하는 함수
 const getExpiredDate = (dateString, month) => {     //날짜, terms[1] 값으로
-    let [year, mon, day] = dateString.split('.').map((v) => Number(v)); //날짜 각각 담고 숫자로 바꿔줌
+    let [year, mon, day] = dateString.split('.').map(Number); //날짜 각각 담고 숫자로 바꿔줌
     mon += month;                                   // 날짜에 보관 가능 날짜 더하기
     day -= 1;                                       // 5일이면 4일까지 보관이 가능하므로 1 빼줌
     if(day === 0) {                                 // 1을 뺐을 때 0이되면 
@@ -26,6 +26,7 @@ function solution(today, terms, privacies) {
         const termPeriod = Number(terms.find((innerTerm) => {
             return (innerTerm[0] === term)
         }).split(' ')[1])                       // 6 12 3 3 이런식으로 담김
+        console.log(termPeriod)
         const [eYear, eMon, eDay] = getExpiredDate(date, termPeriod);  // 만료되는 날짜
         const [year, mon, day] = today.split('.').map(v => Number(v));
 
