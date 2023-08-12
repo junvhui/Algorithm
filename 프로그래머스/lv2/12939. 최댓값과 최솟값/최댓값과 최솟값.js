@@ -1,6 +1,6 @@
 function solution(s) {
-    let num = s.split(" ")
-    let max = Math.max(...num)
-    let min = Math.min(...num)
+    var num = s.split(" ")
+    var max = Math.max(...num)
+    var min = Math.min(...num)
     return min+" "+max;
 }
