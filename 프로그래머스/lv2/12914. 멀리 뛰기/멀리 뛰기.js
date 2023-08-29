@@ -7,3 +7,10 @@ function solution(n) {
     }
     return answer % 1234567;
 }
+
+// n=1 1
+// n=2 2
+// n=3 3
+// n=4 5
+// n=5 8
+// n=6 13
