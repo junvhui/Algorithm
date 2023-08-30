@@ -15,3 +15,4 @@ function gcd(minNum, maxNum){
 function lcm(minNum, maxNum){
   return minNum * maxNum / gcd(minNum, maxNum);
 }
+// 유클리드
