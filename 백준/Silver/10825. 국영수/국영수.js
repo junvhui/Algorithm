@@ -1,8 +1,8 @@
 const input = require('fs').readFileSync(0).toString().trim().split('\n');
-const N = input.shift();               // 전체 학생 수
+const N = input.shift();
 
 let arr = [];
-for (let i = 0; i < N; i++) {
+for(let i = 0; i < N; i++){
     const [name, kor, eng, math] = input[i].split(' ');
     arr.push([name, kor, eng, math]);
 }
@@ -24,7 +24,8 @@ arr.sort((a, b) => {
         if(a[0] < b[0]) return -1;
     }
 })
-.forEach(e=>{
-    answer += `${e[0]}\n`
+.forEach(v => {
+    answer += `${v[0]}\n`
 })
+
 console.log(answer);
