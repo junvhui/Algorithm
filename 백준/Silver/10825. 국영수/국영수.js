@@ -20,8 +20,11 @@ arr.sort((a, b) => {
         return b[3] - a[3];
     //모든 점수가 같으면 이름이 사전 순으로 증가하는 순서로
     }else {
-        if(a[0] > b[0]) return 1;
-        if(a[0] < b[0]) return -1;
+        if(a[0] > b[0]) {
+            return 1;
+        }else{
+            return -1;
+        }
     }
 })
 .forEach(v => {
