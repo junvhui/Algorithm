@@ -1,8 +1,8 @@
 const input = require('fs').readFileSync(0).toString().trim().split('\n');
-const testCase = input.shift();
+const N = input.shift();               // 전체 학생 수
 
 let arr = [];
-for (let i = 0; i < testCase; i++) {
+for (let i = 0; i < N; i++) {
     const [name, kor, eng, math] = input[i].split(' ');
     arr.push([name, kor, eng, math]);
 }
