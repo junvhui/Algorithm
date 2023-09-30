@@ -1,5 +1,5 @@
 function solution(s) {
-  let answer = [0, 0];
+  var answer = [0, 0];
 
   while (s.length > 1) {
     let sLength = s.length;
