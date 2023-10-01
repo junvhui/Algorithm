@@ -1,5 +1,5 @@
 function solution(people, limit) {
-    let answer = 0;
+    var answer = 0;
     people.sort ((a,b) => b-a)  // 내림차순 정렬
     // [80,70,50,50]
     let small = people.length - 1;
