@@ -7,7 +7,7 @@ function solution(citations) {
     var n = citations.length;
     
     for(var i = 0; i < n; i++) {
-        if(i+1<=citations[i]) {
+        if(i + 1 <= citations[i]) {     // 
             answer++;
         }
     }
