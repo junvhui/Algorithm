@@ -1,7 +1,7 @@
 function solution(n) {
-    for(let x = 0; x <= n; x++){
-        if(n % x == 1){
-            return x;
+    for(let k = 0; k <= n; k++){
+        if(n % k == 1){
+            return k;
         }
 }
 }
