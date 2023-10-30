@@ -1,6 +1,6 @@
 function solution(n, words) {
-    let stack = [];                     // 글자 넣어줄 스택
-    let answer = [0, 0];
+    var stack = [];                     // 글자 넣어줄 스택
+    var answer = [0, 0];
     
     for(let i = 0; i < words.length; i++){
         if(stack.length === 0){         // 만약 스택이 비었다면
