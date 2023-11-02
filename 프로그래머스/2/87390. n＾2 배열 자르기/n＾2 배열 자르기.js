@@ -1,9 +1,16 @@
 function solution(n, left, right) {
-    const ans = [];
+  let answer = [];
+  let y = Math.floor(left / n);     // 
+  let x = left % n;
 
-    while (left <= right) {
-        ans.push(Math.max(Math.floor(left / n), left++ % n) + 1);
+  for (let i = 0; i <= right - left; i++) {
+    answer.push(Math.max(x, y) + 1);
+    if (x + 1 < n) {
+      x++;
+    } else {
+      y++;
+      x = 0;
     }
-
-    return ans;
+  }
+  return answer;
 }
