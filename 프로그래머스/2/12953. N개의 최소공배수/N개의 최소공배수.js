@@ -1,6 +1,6 @@
 function solution(arr) {
     var answer = arr[0];
-    var len = arr.length;
+    let len = arr.length;
     for(let i=0; i<len-1; i++){
       answer = lcm(answer,arr[i+1])
     }
