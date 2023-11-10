@@ -1,21 +1,15 @@
 N = int(input())
-
-result = ''
-count = 0
-
-for test_case in range(1, N + 1):
-    a = list(str(test_case))
-    for i in a:
-        if int(i) % 3 == 0 and int(i) != 0:
+for num in range(1, N+1):
+    temp = num
+    count = 0
+    while temp > 0:
+        if temp % 10 in [3, 6, 9]:
             count += 1
             
-    if(count==0):
-        result += str(test_case)
+        temp //= 10
+    
+    if count > 0:
+        print("-"*count, end=" ")
     else:
-        for i in range(count):
-            result += '-'
-            count = 0
-            
-    result += ' '
-            
-print(result)
+        print(num, end=" ")
+
