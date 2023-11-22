@@ -16,5 +16,3 @@ function solution(phone_book) {
 
     return true;
 }
-
-// 
