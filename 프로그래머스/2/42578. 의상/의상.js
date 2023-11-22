@@ -1,21 +1,15 @@
 function solution(clothes) {
     let answer = 1;
-    let map = new Map();
+   	let obj={};
     
-    for (let i= 0; i < clothes.length; i++) {
-        let [c, v] = clothes[i];
-        if(map.has(v)) {
-            map.set(v, map.get(v) + 1);
-        } else {
-            map.set(v, 1);
-        }
-    }
- 
-    map.forEach(v => {
-        answer *= (v + 1);
+    clothes.forEach((cloth) => {
+        obj[cloth[1]]=(obj[cloth[1]] || 1) + 1;
     })
     
-    answer = answer - 1;
+    for(let key in obj){
+        answer *= obj[key];
+    }
     
-    return answer;
+    return answer-1;
+    
 }
