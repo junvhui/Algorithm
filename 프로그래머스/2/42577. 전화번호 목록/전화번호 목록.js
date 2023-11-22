@@ -1,27 +1,17 @@
 function solution(phone_book) {
-  phone_book.sort(); // 전화번호 리스트를 정렬합니다.
+    const map = new Map();
 
-  for (let i = 0; i < phone_book.length - 1; i++) {
-    // 현재 번호와 다음 번호의 시작 부분이 같으면 접두어이므로 false를 반환합니다.
-    if (phone_book[i] === phone_book[i + 1].substring(0, phone_book[i].length)) {
-      return false;
+    for (let i = 0; i < phone_book.length; i++) {
+        map.set(phone_book[i], 1);
     }
-  }
 
-  return true; // 접두어가 없는 경우 true를 반환합니다.
+    for (let i = 0; i < phone_book.length; i++) {
+        for (let j = 0; j < phone_book[i].length; j++) {
+            if (map.has(phone_book[i].substring(0, j))) {
+                return false;
+            }
+        }
+    }
+
+    return true;
 }
-
-
-
-
-// function solution(phone_book) {
-//     phone_book.sort();
-    
-//     for(let i = 1; i < phone_book.length; i++){
-//         if(phone_book[i].includes(phone_book[0])){
-//             return false;
-//         }
-//     }
-    
-//     return true;
-// }
