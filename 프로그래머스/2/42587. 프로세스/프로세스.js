@@ -1,4 +1,35 @@
 function solution(priorities, location) {
+    var answer = 0;
+    var position = [];                                  // 위치 배열
+
+    
+    for(let i = 0; i < priorities.length; i++){
+        position.push(i)
+    }
+    
+    while(priorities.length > 0){
+        var max = Math.max(...priorities); 
+        if(priorities[0] < max){
+            priorities.push(priorities.shift());
+            position.push(position.shift());
+        }else{
+            answer += 1;
+            priorities.shift();
+            if(position.shift() === location){
+                return answer;
+            }
+        }
+    }
+    
+    return max;
+}
+
+
+
+
+
+/*
+function solution(priorities, location) {
     let answer = 0;
     let pos_map = []
     let max_value = Math.max(...priorities);
@@ -22,3 +53,4 @@ function solution(priorities, location) {
         }
     }
 }
+*/
