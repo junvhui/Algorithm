@@ -1,19 +1,16 @@
 function solution(s){
-    let count = 0;
+    var stack = [];
     
     for(let i = 0; i < s.length; i++){
-        if(s[i] === "("){
-            count += 1;
-        }else{
-            count -= 1;
-        }
+        stack.push(s[i])
         
-        if(count < 0){
-                return false;
-            }
+        if(stack[stack.length - 1] === ")" && stack[stack.length - 2] === "("){
+            stack.pop();
+            stack.pop();
+        }
     }
-    
-     return count === 0 ? true : false   // 합이 0인지 아닌지
+
+    return stack.length === 0 ? true : false;
 }
 
 
