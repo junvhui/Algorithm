@@ -1,6 +1,6 @@
 function solution(progresses, speeds) {
-    let answer = [];                                                // 결과값 배열
-    let stack = [];                                                 // 작업 과정 스택
+    var answer = [];                                                // 결과값 배열
+    var stack = [];                                                 // 작업 과정 스택
     
     for(let i = 0; i < progresses.length; i++){
         var complete = Math.ceil((100 - progresses[i]) / speeds[i]); // 100에서 progress 뺀 값에서 스피드로 나누는데 2.xx일이 나와도 3일간 작업 후 배포가 가능하므로 Math.ceil
