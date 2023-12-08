@@ -1,6 +1,6 @@
 function solution(sizes) {
-    var width = 0;
-    var height = 0;
+    let width = 0;
+    let height = 0;
     for(let i = 0; i < sizes.length; i++){
         let [a, b] = sizes[i].sort((a, b) => a - b)
         console.log([a, b])
