@@ -1,5 +1,5 @@
 function solution(nums) {
-    let pocketMons = {};                                            // 포켓몬 Map 만들어줌
+    var pocketMons = {};                                            // 포켓몬 Map 만들어줌
     
     nums.forEach((pocketmon) => {
         pocketMons[pocketmon] = pocketMons[pocketmon] + 1 || 1;     // 포켓몬 없으면 1 할당, 있으면 +1
