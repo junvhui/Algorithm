@@ -1,7 +1,7 @@
 
 function solution(k, dungeons) {
-   var answer = 0;
-    // 각 던전을 체크하는 배열
+   let answer = 0;
+
    const checkedArray = new Array(dungeons.length).fill(false);
     // [false, false, false]
    
