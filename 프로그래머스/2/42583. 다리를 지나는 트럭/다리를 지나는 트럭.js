@@ -1,29 +1,33 @@
 function solution(bridge_length, weight, truck_weights) {
-    var answer = 0;
-    let bridge = [];
-    let bridge_weight = 0;
-    while (truck_weights.length > 0) {
+    let answer = 0; // 초
+    let sum = 0;    // 현재 다리의 무게
+    let queue = new Array(bridge_length);
+    
+    // [0,0,0,0,0....]
+    queue.fill(0);
+
+    // queue가 존재할 동안
+    while(queue.length > 0){
+        // 초 증가
         answer++;
-        // 만약 현재 다리에 있는 트럭 수가 다리에 올라갈 수 있는 트럭 수와 같으면
-        if (bridge.length === bridge_length) {
-            // 현재 다리의 무게에서 다리의 제일 앞 트럭의 무게를 뺀다
-            bridge_weight -= bridge.shift();
+        // 총 무게에서 지나간 트럭 무게 뺌
+        sum -= queue.shift();
+        
+        // 만약 대기중인 트럭이 존재하면서
+        if(truck_weights.length > 0){
+            // 현재 다리의 무게에 대기중인 트럭 중 제일 첫 트럭의 무게를 더한 값이 제한 무게보다 작다면
+            if(sum + truck_weights[0] <= weight){
+                let truck = truck_weights.shift();
+                // 다리 무게에 대기중인 첫 트럭의 무게를 더해주고
+                sum += truck;
+                // 큐(다리)에 트럭을 올림
+                queue.push(truck);
+            }
+            // 제한 무게보다 크면 그냥 0 추가
+            else{
+                queue.push(0);
+            }
         }
-        // 만약 현재 다리의 무게에 들어올 트럭의 무게를 더한 값이 다리가 견딜 수 있는 무게보다 크다면
-        if (bridge_weight + truck_weights[0] > weight) {
-            // 다리에 0을 올려줌
-            bridge.push(0);
-            continue;
-        }
-        // truck_weights의 제일 첫 값이 현재 트럭의 무게
-        let truck_weight = truck_weights.shift();
-        // 다리에 현재 트럭을 올림
-        bridge.push(truck_weight);
-        // 다리 무게에 현재 트럭의 무게를 더해줌
-        bridge_weight += truck_weight;
     }
-
-    answer += bridge_length;
-
     return answer;
 }
