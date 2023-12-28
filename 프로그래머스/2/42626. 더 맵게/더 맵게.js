@@ -1,4 +1,3 @@
-// 해당 문제는 Heap 구조를 활용해야 함
 class MinHeap {
   constructor() {
     this.heap = [];
@@ -8,7 +7,7 @@ class MinHeap {
     return this.heap.length;
   }
       
-    // 값을 넣되, 오름차 순 정렬함
+    // 값을 넣고, 오름차 순 정렬함
   push(value) {
     this.heap.push(value);
     let currentIndex = this.heap.length - 1;
