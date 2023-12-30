@@ -7,7 +7,7 @@ class MinHeap {
     return this.heap.length;
   }
       
-    // 값을 넣고, 오름차 순 정렬함
+    // 값을 넣고, 오름차 순 정렬
   push(value) {
     this.heap.push(value);
     let currentIndex = this.heap.length - 1;
@@ -23,7 +23,7 @@ class MinHeap {
     }
   }
 
-    // 값을 빼되, 오름차 순 정렬 함
+    // 값을 빼고 오름차 순 정렬
   pop() {
     if (this.heap.length === 0) return null;
     if (this.heap.length === 1) return this.heap.pop();
