@@ -1,5 +1,5 @@
 function solution(citations) {
-    var answer = 0;
+    let answer = 0;
     
     citations.sort((a,b)=>{
         return b-a;                     // [6, 5, 3, 1, 0]
