@@ -78,6 +78,6 @@ function solution(scoville, K) {
     mixedCount++;
   }
 
-  // 최소 힙의값이 K보다 크거나 같으면 mixedCount 출력
+  // 최소 힙의 값이 K보다 크거나 같으면 mixedCount 출력
   return minHeap.peek() >= K ? mixedCount : -1;
 }
