@@ -1,6 +1,6 @@
 function solution(clothes) {
-    var answer = 1;
-   	var obj={};
+let answer = 1;
+   	let obj={};
     
     clothes.forEach((cloth) => {                    // 옷 각각을 hash로 map
         obj[cloth[1]]=(obj[cloth[1]] || 1) + 1;     // +1 은 하나의 의상만 착용하는 것이 가능해서
