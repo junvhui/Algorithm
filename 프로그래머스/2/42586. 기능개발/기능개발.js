@@ -1,10 +1,10 @@
 function solution(progresses, speeds) {
-    var answer = [];                                                // 결과값 배열
-    var stack = [];                                                 // 작업 과정 스택
+    let answer = [];                                                // 결과값 배열
+    let stack = [];                                                 // 작업 과정 스택
     
     for(let i = 0; i < progresses.length; i++){
-        var complete = Math.ceil((100 - progresses[i]) / speeds[i]); // 100에서 progress 뺀 값에서 스피드로 나누는데 2.xx일이 나와도 3일간 작업 후 배포가 가능하므로 Math.ceil
-        var lastCompleted = stack[stack.length-1];                  // 가장 최근 완료한 작업
+        let complete = Math.ceil((100 - progresses[i]) / speeds[i]); // 100에서 progress 뺀 값에서 스피드로 나누는데 2.xx일이 나와도 3일간 작업 후 배포가 가능하므로 Math.ceil
+        let lastCompleted = stack[stack.length-1];                  // 가장 최근 완료한 작업
         
         if(stack.length > 0 && lastCompleted.complete >= complete){  // 작업한 내용이 존재하면서 가장 최근 완료한 작업의 소요 일수가 
                                                                     // 현재 진행중인 작업의 진행 일수보다 크거나 같다면
