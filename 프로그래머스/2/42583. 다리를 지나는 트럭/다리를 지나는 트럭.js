@@ -1,7 +1,7 @@
 function solution(bridge_length, weight, truck_weights) {
-    var answer = 0; // 초
-    var sum = 0;    // 현재 다리의 무게
-    var queue = new Array(bridge_length);
+    let answer = 0; // 초
+    let sum = 0;    // 현재 다리의 무게
+    let queue = new Array(bridge_length);
     
     // [0,0,0,0,0....]
     queue.fill(0);
