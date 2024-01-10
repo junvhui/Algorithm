@@ -1,6 +1,6 @@
 function solution(numbers, target) {
   let answer = 0;
-  const length = numbers.length;
+  let length = numbers.length;
 
   function dfs(count, sum) {
     if (count === length) {
