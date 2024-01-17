@@ -1,16 +1,12 @@
 function solution(n, left, right) {
-  let answer = [];
-  let y = Math.floor(left / n);     // 
-  let x = left % n;
+let answer = [];
 
-  for (let i = 0; i <= right - left; i++) {
-    answer.push(Math.max(x, y) + 1);
-    if (x + 1 < n) {
-      x++;
-    } else {
-      y++;
-      x = 0;
+    while (left <= right) {
+        answer.push(Math.max(Math.floor(left / n), left++ % n) + 1);
     }
-  }
-  return answer;
+
+    return answer;
 }
+
+
+// x, y 좌표 값 구해서 더 큰 값 + 1 을 넣어줌
