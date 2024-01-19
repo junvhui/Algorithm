@@ -1,6 +1,6 @@
 function solution(n) {
-    var result = 0;
-    var t1 = 0 , t2 = 1;
+    let result = 0;
+    let t1 = 0 , t2 = 1;
     
     for(let i = 2 ; i <= n + 1 ; i++) {
         result = t1 + t2 % 1234567;
