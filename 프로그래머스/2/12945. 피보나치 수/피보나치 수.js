@@ -1,5 +1,6 @@
 function solution(n) {
-let answer = [];
+    
+    let answer = [];
     for(let i =0; i <= n;i++){
         if (i === 0){                           // 0이면 0넣고
             answer.push(0)
