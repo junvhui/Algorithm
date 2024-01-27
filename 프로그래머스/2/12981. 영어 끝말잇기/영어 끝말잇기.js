@@ -1,17 +1,17 @@
 function solution(n, words) {
-    var stack = [];                     // 글자 넣어줄 스택
-    var answer = [0, 0];
+    let stack = [];                     // 글자 넣어줄 스택
+    let answer = [0, 0];
     
     for(let i = 0; i < words.length; i++){
         if(stack.length === 0){         // 만약 스택이 비었다면
             stack.push(words[i]);       // 글자 넣고
             continue;
         }
-        var pre = stack[stack.length - 1];  // 이전 단어
-        var preWord = pre[pre.length - 1];  // 이전 단어의 마지막 글자
+        let pre = stack[stack.length - 1];  // 이전 단어
+        let preWord = pre[pre.length - 1];  // 이전 단어의 마지막 글자
         
-        var now = words[i];                 // 현재 단어
-        var nowWord = now[0];               // 현재 단어의 첫 글자
+        let now = words[i];                 // 현재 단어
+        let nowWord = now[0];               // 현재 단어의 첫 글자
         
         if(preWord !== nowWord || stack.includes(now)){     // 이전 단어의 마지막 글자와 현재 단어의 첫 글자가 다르거나, 
                                                             // 스택에 현재 단어가 있으면
