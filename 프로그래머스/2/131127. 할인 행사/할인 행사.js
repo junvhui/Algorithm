@@ -1,6 +1,6 @@
 function solution(want, number, discount) {
 
-    let result = 0;
+    var result = 0;
     
     discount.forEach((v, i) => {                        // discount 첫번째 부터 돌림
         
@@ -11,7 +11,7 @@ function solution(want, number, discount) {
             return result;                              // 종료
         }
         
-        let check = 0;                                  
+        var check = 0;                                  
         
         for(let j = 0; j < want.length; j++){           // discounts 필터링해서 want의 값 개수랑 같으면
             if([...discounts].filter((v) => v == want[j]).length === number[j]){
