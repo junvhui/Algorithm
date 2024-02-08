@@ -1,14 +1,14 @@
 function solution(want, number, discount) {
 
-    var result = 0;
+    let result = 0;
     
-    discount.forEach((v, i) => {                        // discount 첫번째 부터 돌림
+    discount.forEach((v, i) => {                       
         
-        let discounts = [...discount].slice(i, i+10)    // discount의 돌리는 인덱스부터 +10 값들을 
-                                                        // discounts에 넣음
+        let discounts = [...discount].slice(i, i+10)    
+                                                       
        
-        if(discounts < 10){                             // discounts가 10보다 작으면 이미 10일 연속은 불가하므로
-            return result;                              // 종료
+        if(discounts < 10){                           
+            return result;                           
         }
         
         var check = 0;                                  
