@@ -1,14 +1,14 @@
 function solution(s) {
 
-    let result = 0;
-    const arr = s.split('')
+    var result = 0;
+    var arr = s.split('')
 
     for (let i = 0; i < s.length; i++) {
         arr.push(arr.shift())               // 맨 앞 문자 맨 뒤로 이동
 
         
-    let stack = [];
-    let flag = true;
+    var stack = [];
+    var flag = true;
         for(let s of arr){
             if(s === '{' || s === '[' || s === '(') {
                 stack.push(s)
