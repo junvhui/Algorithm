@@ -1,6 +1,6 @@
 function solution(s) {
 
-    var result = 0;
+    let result = 0;
     var arr = s.split('')
 
     for (let i = 0; i < s.length; i++) {
