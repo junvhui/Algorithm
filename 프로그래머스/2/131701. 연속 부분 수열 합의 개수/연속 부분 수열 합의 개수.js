@@ -1,6 +1,6 @@
 function solution(elements) {
-    let set = new Set();
-    let len = elements.length;
+    var set = new Set();
+    var len = elements.length;
     
     for(let i = 1; i <= len; i++){
         for(let j = 0; j < len; j++){       // 시작좌표
