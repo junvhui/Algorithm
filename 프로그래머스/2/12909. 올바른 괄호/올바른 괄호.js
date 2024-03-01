@@ -1,13 +1,14 @@
 function solution(s){
+    
     var stack = [];
     
     for(let i = 0; i < s.length; i++){
-        stack.push(s[i])                        // stack에 하나씩 넣을 때
+        stack.push(s[i])                    
         
         if(stack[stack.length - 1] === ")" && stack[stack.length - 2] === "("){
-                                                // 만약 넣은 값이랑 넣은 값 바로 이전 값이 "()" 이면
-            stack.pop();                        // 둘다 빼
-            stack.pop();                        // 빼
+         // 만약 넣은 값이랑 넣은 값 바로 이전 값이 "()" 이면
+            stack.pop();                        
+            stack.pop();                        
         }
     }
 
