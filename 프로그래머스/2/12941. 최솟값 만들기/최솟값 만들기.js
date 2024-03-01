@@ -1,14 +1,14 @@
 function solution(A,B){
     
-    var result = 0;
+    var answer = 0;
 
     A = A.sort((a, b) => a-b)
     B = B.sort((a, b) => b-a)
     
     for(let i = 0; i < A.length; i++){
-        result += A[i] * B[i]
+        answer += A[i] * B[i]
     }
 
   
-    return result;
+    return answer;
 }
