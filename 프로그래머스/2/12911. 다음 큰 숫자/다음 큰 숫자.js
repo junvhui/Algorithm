@@ -1,6 +1,6 @@
 function solution(n) {
-    let arr = n.toString(2).split('');               // 2진수로
-    let count = arr.filter((v)=> v === "1").length   // 2진수에서 1만
+    let arr = n.toString(2).split('');              
+    let count = arr.filter((v)=> v === "1").length  
     
     while(count !== count2){                            // 원래 1의 개수랑 다음 숫자의 1개수가 다르면 계속 진행
         n++
