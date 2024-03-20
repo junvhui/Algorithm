@@ -1,10 +1,12 @@
 function solution(arr) {
-    let answer = arr[0];
+    
+    let result = arr[0];
     let len = arr.length;
+    
     for(let i=0; i<len-1; i++){
-      answer = lcm(answer,arr[i+1])
+      result = lcm(result,arr[i+1])
     }
-    return answer;
+    return result;
 }
 
 // 최대공약수
@@ -15,4 +17,3 @@ function gcd(minNum, maxNum){
 function lcm(minNum, maxNum){
   return minNum * maxNum / gcd(minNum, maxNum);
 }
-// 유클리드
