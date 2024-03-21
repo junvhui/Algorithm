@@ -18,4 +18,4 @@ for(let i = 0; i < N - 1; i++){
   answer += BigInt(dist[i]) * BigInt(cost[i]);
 }
 
-console.log(parseInt(answer))
+console.log(String(answer))
