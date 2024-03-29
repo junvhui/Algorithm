@@ -1,12 +1,10 @@
 function solution(want, number, discount) {
 
-    var result = 0;
-    
+    let result = 0;
     discount.forEach((v, i) => {                       
         
         let discounts = [...discount].slice(i, i+10)    
                                                        
-       
         if(discounts < 10){                           
             return result;                           
         }
